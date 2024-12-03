@@ -1,18 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
 import Movie from "./movie/movieCard";
-
-interface Movie {
-  _id: string;
-  titulo: string;
-  ano: number;
-  synopsis: string;
-  puntaje: number;
-  imagen: string;
-}
+import { MovieType } from "./types/movie";
 
 const Home = () => {
-  const [movies, setMovies] = useState<Movie[]>([]);
+  const [movies, setMovies] = useState<MovieType[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newMovie, setNewMovie] = useState({
     titulo: "",

@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { MovieType } from "../types/movie";
 
-export default function MovieCard({ movie }) {
+export default function MovieCard(movie: MovieType) {
   return (
     <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
       <img
