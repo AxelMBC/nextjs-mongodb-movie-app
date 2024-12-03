@@ -3,7 +3,10 @@ import { MovieType } from "../types/movie";
 
 export default function MovieCard(movie: MovieType) {
   return (
-    <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+    <div
+      className="bg-gray-800 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+      style={{ minHeight: "400px" }}
+    >
       <img
         src={movie.imagen}
         alt={movie.titulo}
@@ -15,12 +18,12 @@ export default function MovieCard(movie: MovieType) {
             {movie.titulo}
           </h2>
         </Link>
-        <p className="text-sm text-gray-400">Year: {movie.ano}</p>
-        <p className="text-gray-300 mt-2 text-sm">{movie.synopsis}</p>
         <div className="flex items-center mt-4">
           <span className="text-yellow-400 font-bold">{movie.puntaje}</span>
           <span className="ml-2 text-sm text-gray-400">/ 10</span>
         </div>
+        <p className="text-sm text-gray-400">Year: {movie.ano}</p>
+        <p className="text-gray-300 mt-2 text-sm">{movie.synopsis}</p>
       </div>
     </div>
   );

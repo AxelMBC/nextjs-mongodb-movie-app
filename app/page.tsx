@@ -176,13 +176,13 @@ const Home = () => {
                 onClick={() => handleEditMovie(index)}
                 className="absolute top-2 right-2 bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold px-2 py-1 rounded"
               >
-                Edit
+                Editar
               </button>
               <button
                 onClick={() => handleDeleteMovie(index)}
-                className="absolute top-2 right-16 bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-2 py-1 rounded"
+                className="me-3 absolute top-2 right-16 bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-2 py-1 rounded"
               >
-                Delete
+                Borrar
               </button>
             </div>
           ))}
