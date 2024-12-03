@@ -267,13 +267,13 @@ const Home = () => {
                 onClick={handleAddMovie}
                 className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-200"
               >
-                {editingIndex !== null ? "Save Changes" : "Add Movie"}
+                {editingIndex !== null ? "Guardar Cambios" : "Agregar Pelicula"}
               </button>
               <button
                 onClick={closeModal}
                 className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-all duration-200"
               >
-                Cancel
+                Cancelar
               </button>
             </div>
           </div>
