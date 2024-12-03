@@ -123,6 +123,27 @@ const Home = () => {
     setEditingIndex(null);
   };
 
+  const externalLinks = [
+    {
+      name: "Vercel's Edge Middleware",
+      url: "https://vercel.com/",
+    },
+    { name: "AWS Cloud Launch", url: "https://aws.amazon.com/" },
+    { name: "Google Cloud Updates", url: "https://cloud.google.com/" },
+    {
+      name: "Azure Announcements",
+      url: "https://azure.microsoft.com/",
+    },
+    {
+      name: "Netlify's New Features",
+      url: "https://www.netlify.com/",
+    },
+    {
+      name: "DigitalOcean Product Updates",
+      url: "https://www.digitalocean.com/",
+    },
+  ];
+
   useEffect(() => {
     const getMovies = async () => {
       const response = await fetch("/api/movies/all");
@@ -166,6 +187,26 @@ const Home = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="mt-12">
+        <h2 className="text-3xl font-bold text-center mb-6">
+          Produccion en la Nube
+        </h2>
+        <ul className="list-none grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {externalLinks.map((link, index) => (
+            <li key={index} className="text-center">
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline text-lg"
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Modal */}
