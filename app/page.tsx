@@ -164,7 +164,7 @@ const Home = () => {
             onClick={() => setIsModalOpen(true)}
             className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition-all duration-200"
           >
-            Add New Movie
+            +
           </button>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
