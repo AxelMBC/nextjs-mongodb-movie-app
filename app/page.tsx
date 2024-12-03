@@ -218,7 +218,7 @@ const Home = () => {
             </h2>
             <form>
               <div className="mb-4">
-                <label className="block text-sm font-medium mb-2">Title</label>
+                <label className="block text-sm font-medium mb-2">Titulo</label>
                 <input
                   type="text"
                   name="titulo"
@@ -228,7 +228,7 @@ const Home = () => {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium mb-2">Year</label>
+                <label className="block text-sm font-medium mb-2">Año</label>
                 <input
                   type="number"
                   name="ano"
@@ -250,7 +250,9 @@ const Home = () => {
                 ></textarea>
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium mb-2">Score</label>
+                <label className="block text-sm font-medium mb-2">
+                  Puntaje
+                </label>
                 <input
                   type="number"
                   name="puntaje"
@@ -262,7 +264,7 @@ const Home = () => {
               </div>
               <div className="mb-4">
                 <label className="block text-sm font-medium mb-2">
-                  Image URL
+                  URL de Imagen
                 </label>
                 <input
                   type="text"

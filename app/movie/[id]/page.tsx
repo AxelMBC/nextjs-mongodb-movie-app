@@ -72,7 +72,7 @@ export default function MovieDetails() {
           <h1 className="text-4xl font-extrabold text-center mb-4">
             {movie.titulo}
           </h1>
-          <p className="text-center text-gray-400 mb-6">Year: {movie.ano}</p>
+          <p className="text-center text-gray-400 mb-6">Año: {movie.ano}</p>
           <p className="text-gray-300 text-lg leading-relaxed text-center">
             {movie.synopsis}
           </p>
