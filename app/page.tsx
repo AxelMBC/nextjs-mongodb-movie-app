@@ -2,6 +2,13 @@
 import { useState, useEffect } from "react";
 import Movie from "./movie/movieCard";
 import { MovieType } from "./types/movie";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faGithub,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   const [movies, setMovies] = useState<MovieType[]>([]);
@@ -123,27 +130,6 @@ const Home = () => {
     setEditingIndex(null);
   };
 
-  const externalLinks = [
-    {
-      name: "Vercel's Edge Middleware",
-      url: "https://vercel.com/",
-    },
-    { name: "AWS Cloud Launch", url: "https://aws.amazon.com/" },
-    { name: "Google Cloud Updates", url: "https://cloud.google.com/" },
-    {
-      name: "Azure Announcements",
-      url: "https://azure.microsoft.com/",
-    },
-    {
-      name: "Netlify's New Features",
-      url: "https://www.netlify.com/",
-    },
-    {
-      name: "DigitalOcean Product Updates",
-      url: "https://www.digitalocean.com/",
-    },
-  ];
-
   useEffect(() => {
     const getMovies = async () => {
       const response = await fetch("/api/movies/all");
@@ -157,7 +143,7 @@ const Home = () => {
     <div className="bg-gradient-to-b from-darkblue via-gray-900 to-black min-h-screen text-white">
       <div className="container mx-auto px-6 py-10">
         <h1 className="text-4xl font-extrabold text-center mb-10">
-          Top de Mejores Peliculas
+          Top Peliculas
         </h1>
         <div className="flex justify-end mb-8">
           <button
@@ -191,22 +177,23 @@ const Home = () => {
 
       <div className="mt-12">
         <h2 className="text-3xl font-bold text-center mb-6">
-          Produccion en la Nube
+          Links Externos:{" "}
         </h2>
-        <ul className="list-none grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {externalLinks.map((link, index) => (
-            <li key={index} className="text-center">
-              <a
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:underline text-lg"
-              >
-                {link.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+
+        <div className="flex items-center justify-center pb-16">
+          <a target="_blank" href="https://www.instagram.com/axelbarrazaa/">
+            <FontAwesomeIcon icon={faInstagram} className="fa-fw fa-2xl" />
+          </a>
+          <a target="_blank" href="https://github.com/AxelMBC">
+            <FontAwesomeIcon icon={faGithub} className="fa-fw fa-2xl" />
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/in/axelmbc/">
+            <FontAwesomeIcon icon={faLinkedin} className="fa-fw fa-2xl" />
+          </a>
+          <a target="_blank" href="https://www.axelbarraza.com/">
+            <FontAwesomeIcon icon={faBriefcase} className="fa-fw fa-2xl" />
+          </a>
+        </div>
       </div>
 
       {/* Modal */}

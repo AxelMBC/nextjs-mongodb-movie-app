@@ -5,12 +5,12 @@ export default function MovieCard(movie: MovieType) {
   return (
     <div
       className="bg-gray-800 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
-      style={{ minHeight: "400px" }}
+      style={{ minHeight: "555px" }}
     >
       <img
         src={movie.imagen}
         alt={movie.titulo}
-        className="w-full h-48 object-cover"
+        className="w-full h-80 object-cover"
       />
       <div className="p-4">
         <Link href={`/movie/${movie._id}`}>
