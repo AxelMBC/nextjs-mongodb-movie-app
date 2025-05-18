@@ -1,7 +1,5 @@
-// Import the mongoose library
 import mongoose from "mongoose";
 
-// Define the MongoDB connection string
 const DATABASE_URL = process.env.DATABASE_URL || "";
 
 if (!DATABASE_URL) {
