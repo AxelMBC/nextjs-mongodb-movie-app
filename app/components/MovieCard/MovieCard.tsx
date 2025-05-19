@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MovieType } from "../types/movie";
+import { MovieType } from "../../../types/movie";
 
 export default function MovieCard(movie: MovieType) {
   return (

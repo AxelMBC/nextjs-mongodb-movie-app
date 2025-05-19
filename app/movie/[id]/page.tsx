@@ -2,7 +2,6 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 interface Movie {
@@ -61,13 +60,7 @@ export default function MovieDetails() {
       <div className="container mx-auto px-6 py-10">
         <div className="flex flex-col items-center">
           <div className="w-full max-w-lg mb-6">
-            <Image
-              src={movie.imagen}
-              alt={movie.titulo}
-              width={600}
-              height={400}
-              className="w-full h-auto object-cover rounded-lg shadow-md"
-            />
+            <img src={movie.imagen} alt={movie.titulo} className="w-full h-auto rounded" />
           </div>
           <h1 className="text-4xl font-extrabold text-center mb-4">
             {movie.titulo}
